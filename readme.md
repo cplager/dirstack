@@ -1,4 +1,4 @@
-# dirstaack
+# dirstack
 
 This repo contains perl and bash scripts to allow easier migration of directories on linux. (it contains a tcsh set of aliases, too, but these do not currently work).
 
@@ -9,6 +9,7 @@ cd ~
 # skip if scripts already exists
 mkdir -p scripts
 cd scripts
+# *note* : If scripts is a git controlled directory, use git submodule add instead of git clone
 git clone git@github.com:cplager/dirstack.git
 
 # consider adding this line to your .bashrc or .bash_aliases
