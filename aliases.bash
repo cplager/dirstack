@@ -1,6 +1,6 @@
-export SCRIPTS=`/home/cplager/scripts/dirstack/cleanDir ~/scripts`
-alias cdd='cdtitle `~cplager/scripts/dirstack/current_dirstack`'
-alias list='perl ~cplager/scripts/dirstack/dirlist_dirstack'
+export SCRIPTS=`~/scripts/dirstack/cleanDir ~/scripts`
+alias cdd='cdtitle `~/scripts/dirstack/current_dirstack`'
+alias list='perl ~/scripts/dirstack/dirlist_dirstack'
 alias clds='export DIRECTORY_STACK=$PWD'
 
 export UNAMER=`uname -r`
@@ -17,22 +17,22 @@ function cdtitle () {
 }
 
 function cd_original () {
-	export DIRECTORY_STACK=`~cplager/scripts/dirstack/chdir_dirstack $1`
+	export DIRECTORY_STACK=`~/scripts/dirstack/chdir_dirstack $1`
 	cdd
 }
 
 function up () {
-	export DIRECTORY_STACK=`~cplager/scripts/dirstack/up_dirstack $1`
+	export DIRECTORY_STACK=`~/scripts/dirstack/up_dirstack $1`
 	cdd
 }
 
 function back () {
-	export DIRECTORY_STACK=`~cplager/scripts/dirstack/back_dirstack $1`
+	export DIRECTORY_STACK=`~/scripts/dirstack/back_dirstack $1`
 	cdd
 }
 
 function cdgr () {
-	export DIRECTORY_STACK=`~cplager/scripts/dirstack/grep_dirstack $1`
+	export DIRECTORY_STACK=`~/scripts/dirstack/grep_dirstack $1`
 	cdd
 }
 
