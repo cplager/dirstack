@@ -10,7 +10,7 @@ function xtitle() {
 }
 
 function cdtitle () {
-	cd $1
+	\cd $1
 	export TITLE="$HOSTNAME : $PWD"
 	xtitle "$HOSTNAME : $PWD"
         
@@ -42,4 +42,4 @@ alias b="back"
 alias li="list"
 alias cg="cdgr"
 
-export PS1='\[\033]0;$TITLE\007\]\u@\h> '
+#export PS1='\[\033]0;$TITLE\007\]\u@\h> '
