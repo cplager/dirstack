@@ -1,0 +1,19 @@
+#!/usr/bin/perl -w
+
+if (@ARGV && ($ARGV[0] =~ /^-exact/)) {
+    $exact = "true";
+    shift @ARGV;
+}
+
+$file = $ARGV[0];
+
+if (! $exact && ! $file) {
+    $file = $ENV{HOME};
+}
+
+if ($file !~ m|^/|) {
+    $file = "$ENV{PWD}/$file";
+}
+
+
+print $file;
